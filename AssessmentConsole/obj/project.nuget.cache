@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nLdOiiTKEGL/YaHuKqf5bUJQSX9EWqzD7u7WJBr3QqLRqTABBaW1mbfP4ei58u5lL8xcqYdAauD6z+QrjQ2baA==",
+  "success": true,
+  "projectFilePath": "D:\\jalasoft\\dev33\\dev-program-assessment\\AssessmentConsole\\AssessmentConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yhass - PC\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.19\\microsoft.netcore.app.host.win-x64.3.1.19.nupkg.sha512"
+  ],
+  "logs": []
+}

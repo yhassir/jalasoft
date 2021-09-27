@@ -19,7 +19,8 @@ namespace AssessmentConsole
         private void StartPagination()
         {
             string option = GetOption(
-                @"Pagination commands\n
+                @"Pagination commands
+
                 1. Source data
                 0. Back
                 ");
@@ -32,7 +33,8 @@ namespace AssessmentConsole
         private void ProcessPagination()
         {
             string option = GetOption(
-                @"Type: \n
+                @"Type:
+
                 1. Comma separated data(,)
                 2. Pipe separated data(|)
                 3. Space separated data( )
@@ -60,7 +62,8 @@ namespace AssessmentConsole
             {
                 Console.WriteLine("Current Page:" + pagination);
                  string option = GetOption(
-                @"Type: \n
+                @"Type:
+                
                 1. First page
                 2. Next page
                 3. Previous page

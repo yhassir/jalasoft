@@ -11,6 +11,7 @@ namespace AssessmentConsole
             while (!exit) {
                 Console.WriteLine(@"
                 List paginator tool commands
+                
                 1. Paginate
                 0. Exit
                 "
