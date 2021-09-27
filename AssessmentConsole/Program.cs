@@ -16,7 +16,7 @@ namespace AssessmentConsole
                 0. Exit
                 "
                 );
-                Console.WriteLine(">");
+                Console.Write("> ");
                 string option = Console.ReadLine();
                 exit = app.ProcessOption(option);
             }

@@ -34,7 +34,21 @@ namespace AssessmentTest
         [TestMethod]
         public void TestPreviousPage()
         {
-            
+            IElementsProvider<string> provider = new StringProvider();
+            IPagination<string> pagination = new PaginationString(COMMA_SAMPLE, 5, provider);
+            pagination.PreviousPage();
+            string [] expectedElements = {"k", "l", "m", "n", "o"};
+            CollectionAssert.AreEqual(expectedElements, pagination.GetVisibleItems().ToList());
+        }
+
+        [TestMethod]
+        public void TestCurrentPage()
+        {
+            IElementsProvider<string> provider = new StringProvider();
+            IPagination<string> pagination = new PaginationString(COMMA_SAMPLE, 6, provider);
+            pagination.CurrentPage();
+            string [] expectedElements = {"p", "q", "r", "s", "t","u"};
+            CollectionAssert.AreEqual(expectedElements, pagination.GetVisibleItems().ToList());
         }
 
         [TestMethod]
@@ -60,11 +74,21 @@ namespace AssessmentTest
         [TestMethod]
         public void TestLastPageWith10PageSize()
         {
+            IElementsProvider<string> provider = new StringProvider();
+            IPagination<string> pagination = new PaginationString(COMMA_SAMPLE, 10, provider);
+            pagination.LastPage();
+            string [] expectedElements = {"k", "l", "m", "n", "o", "p", "q", "r", "s", "t"};
+            CollectionAssert.AreEqual(expectedElements, pagination.GetVisibleItems().ToList());
         }
 
         [TestMethod]
         public void TestGoToPageWith10PageSize()
         {
+            IElementsProvider<string> provider = new StringProvider();
+            IPagination<string> pagination = new PaginationString(COMMA_SAMPLE, 6, provider);
+            pagination.GoToPage();
+            string [] expectedElements = {"u", "v", "w", "x", "y", "z"};
+            CollectionAssert.AreEqual(expectedElements, pagination.GetVisibleItems().ToList());
         }
 
          [TestMethod]
@@ -82,6 +106,7 @@ namespace AssessmentTest
         {
 
         }
+        
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException), "Invalid page number.")]
         public void TestGoToPageException()

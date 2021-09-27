@@ -32,7 +32,7 @@ namespace Assessment
 
         public void NextPage()
         {
-            
+            throw new System.NotImplementedException();
         }
 
         public void PrevPage()
